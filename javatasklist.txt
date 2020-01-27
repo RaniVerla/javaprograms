@@ -6,11 +6,15 @@ Weclome to programming world!...
 We are going to do programs based on topics
 
 Algorithms
+Searchings and sortings
 Datastuctures
+Arrays,List,Set,Tree,Graph,Matrix
 Java Language
 OOPS,Exceptions,Multi Threading,Concurrency,Collections,java.lang.packages
 Java 8
 Lambda,Functional,streams,Date and Time API,Java Security
+
+Final Copy
 
 
 
