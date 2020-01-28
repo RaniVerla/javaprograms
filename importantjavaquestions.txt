@@ -1,0 +1,8 @@
+What is the difference between Abstract class and an Interface
+Checked and Unchecked exceptions
+Types of nested inner class and how are they called?
+What is callback function and do you achieve call back functions in java
+What are the ways of creating references? What is the difference between weak and soft references
+difference between String,StringBuffer,String Builder and Strinmg joiner
+What is the differnce callByValuse and callByReference
+HashMap and relation between .equals and .hashCode() methods
