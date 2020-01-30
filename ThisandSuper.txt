@@ -1,0 +1,12 @@
+
+
+this(),super()
+These are constructor calls ,to call super class and  current class constructors 
+We can use only in constructor as first statement
+We can use only one at a time but not both simultaneously
+
+this,super
+These are the keywords to refer super class and current class instance members 
+We can use anywhere except static area
+We can write any number of times
+
