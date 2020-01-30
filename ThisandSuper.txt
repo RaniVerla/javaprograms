@@ -10,3 +10,33 @@ These are the keywords to refer super class and current class instance members
 We can use anywhere except static area
 We can write any number of times
 
+
+class superclass {
+	int x = 10;
+}
+
+public class Test extends superclass {
+	int x = 20;
+  //public static void m1(){ 
+	//public void m1() {
+		System.out.println(x);
+		System.out.println(this.x);
+		System.out.println(super.x);
+	}
+	public static void main(String[] args) {
+		Test t = new Test();
+		t.m1();
+	}
+}
+
+OP:
+20
+20
+10
+OP if we use static method instead of normal method we get 
+Exception in thread "main" java.lang.Error: Unresolved compilation problems: 
+	Cannot use this in a static context
+	Cannot use super in a static context
+
+
+
