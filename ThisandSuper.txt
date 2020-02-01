@@ -41,7 +41,13 @@ Exception in thread "main" java.lang.Error: Unresolved compilation problems:
 Aggregation vs Composition
 1.Dependency: Aggregation implies a relationship where the child can exist independently of the parent. For example, Bank and Employee, delete the Bank and the Employee still exist. whereas Composition implies a relationship where the child cannot exist independent of the parent. Example: Human and heart, heart don’t exist separate to a Human
 2.Type of Relationship: Aggregation relation is “has-a” and composition is “part-of” relation.
-3.Type of association: Aggregation is a weak Association and Composition is a strong Association whereas .
+3.Type of association: Aggregation is a weak Association and Composition is a strong Association whereas.
+
+OOPS in one word
+1. Abstraction:-data hiding (declare methods don't define them)
+2.Encapsulation:-information hiding and implementation hiding(Information hiding is done through using access control modifiers (public, private, protected) and implementation hiding is achieved through creation of interface for a class.)
+3.Inheritance:-code reusability (by using extends keyword)
+4.Polymorphism:-data binding(static/dynamic-method overloading/method overriding)
 
 
 
