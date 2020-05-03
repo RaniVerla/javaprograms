@@ -1,0 +1,72 @@
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Test {
+
+	public static void main(String[] args) {
+		int[] numbers = { 2, 4, 3, 5, 6, -2, 4, 7, 8, 9};
+		int[] numbersWithDuplicates = { 2, 4, 3, 5, 6, -2, 4, 7, 8, 9 };
+		prettyPrint(numbers, 7);
+
+		System.out.println("------------------- ");
+		prettyPrint1(numbersWithDuplicates, 7);
+
+	}
+
+	private static void prettyPrint1(int[] arr, int sum) {
+		
+		Arrays.sort(arr);
+		
+		for (int i = 0; i < arr.length; i++) {
+								
+			int l=0, r=arr.length-1;
+			
+			while(l<r)
+			{
+				if(arr[i]+arr[l]+arr[r]==sum)
+				{
+					System.out.println(arr[i] +" + " +arr[l]+" + "+arr[r] +" = "+sum);
+				l++;
+				r--;
+				}
+				else if(arr[i]+arr[l]+arr[r] < sum)
+					l++;
+				else
+					r--;
+				
+			}
+			i++;
+			
+			
+		}
+		
+	}
+
+	private static void prettyPrint(int[] arr, int sum) {
+
+		if (arr.length < 2) {
+			return;
+		}
+
+		Set set = new HashSet(arr.length);
+
+		for (int i = 0; i < arr.length; i++) {
+			
+			int curr_diff=sum-arr[i];
+
+			for (int j = i+1; j < arr.length; j++) {
+				
+				int diff=curr_diff-arr[j];
+				if(set.contains(diff))
+					System.out.println(arr[i] +" + " +arr[j]+" + "+diff +" = "+sum);
+
+				set.add(arr[j]);
+				
+			}
+
+		}
+
+	}
+
+}
