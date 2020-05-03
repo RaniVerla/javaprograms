@@ -1,0 +1,25 @@
+1.Given a number with any number of digits, identify the next higher number that is possible by swapping one of the digits. 
+For example, for 18 it would be 81, for 218, it would 812
+2.Given two integer arrays A and B, write a boolean function that returns true if we can find one element from A and one element 
+from B,so that after we swap the two element, the sum of the two arrays are the same. Return false if we can't find such pair of 
+element 
+3.Coding question: Given a string with special chars, reverse the string with keeping special char position as it is. For example:
+Given:                     ab?c/-dhjk!
+
+Output should be: kj?h/-dcba!  
+
+4.Same as above, but numbers instead of special characters 
+5.Consider a 2d array, print diagonal elements
+6.Identify character that occurs most often in a string --done using hashmap or char array
+7.Check the largest element in an array 
+8.Get the max cluster of 1’s in a 2D array of 1s and 0s 
+9.Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+(i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]). 
+You are given a target value to search. If found in the array return its index, otherwise return -1.
+You may assume no duplicate exists in the array.condition:should be O(logn)
+10.Anagrams,palindrome,reverse,duplicate,rotate an array/string
+11.Find the peak in the array : means find the which greater than its neighbours ex: {12,23,15,1,16,54,90,64} 
+o/p: can be 20 or 90 .but we have to follow  O(logn)
+12.Max Stock
+13.permutation and combination of a string
+14.island and similar kind if adjancent nodes are more than two zeros then particular node has to become zero
