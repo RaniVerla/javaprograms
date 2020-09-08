@@ -1,0 +1,92 @@
+public class SingletonDemo implements Runnable {
+
+	private static SingletonDemo getObj = null;
+
+	static int count = 0;
+
+	private SingletonDemo() {
+
+	}
+
+	public static  SingletonDemo getInstance()
+	{
+		if(getObj==null)
+		{	
+			getObj=new SingletonDemo();
+		}
+		
+		return getObj;
+	}
+
+//	public static synchronized SingletonDemo getInstance() {
+//		if (getObj == null) {
+//			getObj = new SingletonDemo();
+//		}
+//
+//		return getObj;
+//
+//	}
+
+//	public static SingletonDemo getInstance() {
+//		if (getObj == null) {
+//			synchronized (SingletonDemo.class) {
+//				if (getObj == null) {
+//					getObj = new SingletonDemo();
+//				}
+//			}
+//		}
+//
+//		return getObj;
+//	}
+
+	@Override
+	public void run() {
+		System.out.println(Thread.currentThread().getName());
+	}
+
+}
+---------------------------------------------------------------------------------------------------------------
+
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class SingletonBreakageByMultipleThreads {
+	 public static final int MAX_T=10;
+	
+	public static void main(String[] args) {
+		
+		Runnable r1=(()->{
+			SingletonDemo st1=SingletonDemo.getInstance();
+			System.out.println(st1.hashCode());			
+		});
+		Runnable r2=(()->{
+			SingletonDemo st1=SingletonDemo.getInstance();
+			System.out.println(st1.hashCode());
+			
+		});
+		Runnable r3=(()->{
+			SingletonDemo st1=SingletonDemo.getInstance();
+			System.out.println(st1.hashCode());			
+		});
+		Runnable r4=(()->{
+			SingletonDemo st1=SingletonDemo.getInstance();
+			System.out.println(st1.hashCode());			
+		});
+		Runnable r5=(()->{
+			SingletonDemo st1=SingletonDemo.getInstance();
+			System.out.println(st1.hashCode());			
+		});		
+		
+		ExecutorService service=Executors.newFixedThreadPool(MAX_T);
+		
+		service.execute(r1);
+		service.execute(r2);
+		service.execute(r3);
+		service.execute(r4);
+		service.execute(r5);
+		
+		service.shutdown();	
+	}
+
+}
