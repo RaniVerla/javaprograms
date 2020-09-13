@@ -1,0 +1,39 @@
+import java.util.Arrays;
+
+public class Plusone {
+
+	public static void main(String[] args) {
+
+		int[] arr = {9, 9, 9 };
+		int[] newarr = plusone(arr);
+		System.out.println(Arrays.toString(newarr));
+
+	}
+
+	private static int[] plusone(int[] digits) {
+
+		boolean flag = false;
+		int[] newarr = new int[digits.length + 1];
+		Arrays.fill(newarr, 0);
+
+		int len = digits.length - 1;
+		while (len >= 0) {
+			if (digits[len] != 9) {
+				digits[len]++;
+				flag = false;
+				break;
+			} else {
+				digits[len] = 0;
+				flag = true;
+			}
+			len--;
+		}
+
+		if (flag) {
+			newarr[0] = 1; // [ 1 0 0 0 ]
+			return newarr;
+		} else {
+			return digits;
+		}
+	}
+}
